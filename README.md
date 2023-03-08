@@ -3,7 +3,16 @@
 
 **Introdution**
 
-In this project, I developed skills in working with large-scale datasets and multilingual text by analyzing 1.1 billion tweets sent in 2020. I used Python to process and extract valuable information from big data, specifically by creating a modified map.py file that tracks the usage of hashtags on both a language and country level. This project helped me practice my ability to write a shell script and use `nohup`, `&`, and other process control tools effectively.
+The project involves analyzing the spread of COVID-19 on social media using geotagged tweets sent in 2020. The dataset contains approximately 1.1 billion tweets stored in zip files, with each file containing tweets for a single day in JSON format. The project follows a MapReduce procedure, where the map step is modified to track the usage of hashtags on both a language and country level, and the reduce step merges the output from map.py to visualize the combined results. The project requires working with large-scale multilingual datasets and using the MapReduce divide-and-conquer paradigm to create parallel code.
+
+**Learning Objectives:**
+
+1. work with large scale datasets
+1. work with multilingual text
+1. use the MapReduce divide-and-conquer paradigm to create parallel code
+
+
+**The results:**
 
 ![bargraph_for#coronavirus_tweets_by_Country](https://user-images.githubusercontent.com/123044356/223394004-16b8da51-a1b3-4987-a509-962cebd64bf6.png)
 
@@ -34,11 +43,10 @@ You will scan all geotagged tweets sent in 2020 to monitor for the spread of the
 This project required LOTs of computation time. I was working on it for over one week. Most the reason why it requied that much time it is because we, all students, in the class, for the class (Big Data) use the CMC-lambda server for the class. When many students are connected and trying the run some commands at the same time, it makes it take longer.
 
 
-**Learning Objectives:**
+**Conclusion and skills squired:**
 
-1. work with large scale datasets
-1. work with multilingual text
-1. use the MapReduce divide-and-conquer paradigm to create parallel code
+In this project, I developed skills in working with large-scale datasets and multilingual text by analyzing 1.1 billion tweets sent in 2020. I used Python to process and extract valuable information from big data, specifically by creating a modified map.py file that tracks the usage of hashtags on both a language and country level. This project helped me practice my ability to write a shell script and use `nohup`, `&`, and other process control tools effectively.
+
 
 ## Background
 
@@ -62,6 +70,10 @@ in order to be able to process large scale parallel processing that project requ
 
 <img src=mapreduce.png width=100% />
 
+
+
+## Tasks
+
 I mostly had to work on the map and reduce steps since the partition (splitting up the tweets into one file per day) was done for us already.
 
 **Runtime:**
@@ -69,10 +81,7 @@ I mostly had to work on the map and reduce steps since the partition (splitting 
 The simplest and most common scenario is that the map procedure takes time O(n) and the reduce procedure takes time O(1).
 If having p<<n processors, then the overall runtime will be O(n/p).
 
-
-## Tasks
-
-Complete the following tasks:
+I completed the following tasks:
 
 1.   After forking the [twitter\_coronavirus](https://github.com/mikeizbicki/twitter_coronavirus) repo and clone my fork onto the lambda server.
    Given a `map.py` file, I modified it so that it tracks the usage of the hashtags on both a language and country level by creating a variable `counter_country` and      modifying this variable in the `#search hashtags` section of the code appropriately. The `map.py` file processes a single zip file of tweets.
